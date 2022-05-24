@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Ksu.Cis300.Checkers.Checker">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <AssociationLine Name="Owner" Type="Ksu.Cis300.Checkers.Player" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.75" Y="10.555" />
+        <Point X="1.75" Y="10.78" />
+        <Point X="6.144" Y="10.78" />
+        <Point X="6.144" Y="6.625" />
+        <Point X="5" Y="6.625" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Checker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Owner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Ksu.Cis300.Checkers.Game">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <AssociationLine Name="_blackPlayer" Type="Ksu.Cis300.Checkers.Player" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="6.563" />
+        <Point X="3.5" Y="6.563" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_otherPlayer" Type="Ksu.Cis300.Checkers.Player" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="7.375" />
+        <Point X="3.5" Y="7.375" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_legalMoves" Type="Ksu.Cis300.Checkers.Move" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.75" Y="8.161" />
+        <Point X="1.75" Y="8.712" />
+        <Point X="3.5" Y="8.712" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_moveHistory" Type="Ksu.Cis300.Checkers.Move" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="8.161" />
+        <Point X="2" Y="8.425" />
+        <Point X="3.5" Y="8.425" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>pAAAAAAAAAKAFAAEUCQHACACAAAAEAACABACIgAAAkA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_blackPlayer" />
+      <Field Name="_currentPlayer" />
+      <Field Name="_otherPlayer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_legalMoves" />
+      <Field Name="_board" />
+      <Field Name="_moveHistory" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Ksu.Cis300.Checkers.Move">
+    <Position X="3.5" Y="8" Width="1.75" />
+    <AssociationLine Name="MovingPlayer" Type="Ksu.Cis300.Checkers.Player" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="8.25" />
+        <Point X="5.625" Y="8.25" />
+        <Point X="5.625" Y="7.5" />
+        <Point X="5" Y="7.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.039" Y="0.11" Height="0.182" Width="1.082" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="OtherPlayer" Type="Ksu.Cis300.Checkers.Player" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="8" />
+        <Point X="4.75" Y="7.69" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.941" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="LegalMoves" Type="Ksu.Cis300.Checkers.Move" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="9.812" />
+        <Point X="2.375" Y="9.812" />
+        <Point X="2.375" Y="10.25" />
+        <Point X="3.5" Y="10.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgBAAAgAAAAAAAAEAAAAAAAAAAAIAAAAAAQAAgECIAA=</HashCode>
+      <FileName>Move.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MovingPlayer" />
+      <Property Name="OtherPlayer" />
+      <Property Name="CapturedPiece" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="LegalMoves" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Ksu.Cis300.Checkers.Player">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ksu.Cis300.Checkers.UserInterface">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAACyAAABABIECAAMASABCABABAIAwAAAAAAAY=</HashCode>
+      <FileName>UserInterface.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_game" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Ksu.Cis300.Checkers.SquareContents">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACEAAAAAgAAAAAQAAAAAAAQAAAAAAAAAEAAAA=</HashCode>
+      <FileName>SquareContents.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
