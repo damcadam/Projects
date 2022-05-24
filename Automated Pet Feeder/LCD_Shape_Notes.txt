@@ -1,0 +1,50 @@
+    // Coniser adding a textfile and moving the tft info there
+    // Load main menu in the start up before the user does anything
+    // Note that the coordinate system for the screen starts at the top left (origin at top left)
+    // X increases from left to right and y increases as you travel down
+    // Coordinates are in units of pixels and pixels in the smallest unit for the screen
+    // Colors are represented by 16 bit unished values
+    // Pixes are drawn with: void drawPixel(uint16_t x, uint16_t y, uint16_t color);
+    // Lines are drawn with: void drawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);
+    // First point is the start point of the line, the second point is the end point of the line
+    // Draw perfectly horizontal and vertical lines:
+    // void drawFastVLine(uint16_t x0, uint16_t y0, uint16_t length, uint16_t color);
+    // void drawFastHLine(uint8_t x0, uint8_t y0, uint8_t length, uint16_t color);
+    // Draw a rectangle from the top left point:
+    // void drawRect(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h, uint16_t color);
+    // void fillRect(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h, uint16_t color);
+    // Width and hight go right and down from top left point
+    // The top method is an unfilled rect and the second method is filled rectangle
+    // Our screen resoultion is 320 by 480 pixels
+    // Draw circles:
+    // void drawCircle(uint16_t x0, uint16_t y0, uint16_t r, uint16_t color);
+    // void fillCircle(uint16_t x0, uint16_t y0, uint16_t r, uint16_t color);
+    // Draw some rounded rectangles:
+    //  void drawRoundRect(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h, uint16_t radius, uint16_t color);
+    //  void fillRoundRect(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h, uint16_t radius, uint16_t color);
+    // Draw tringles (need 3 points and colors):
+    // void drawTriangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
+    // void fillTriangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
+
+    // Using text with the screen:
+    // The cursor sets the text to appear at the top left of where the cursor is
+    // Set text color has an optional parameter where you can highlight the background-->do this to show what the user is over w/ buttons
+    // There are three different text sizes 1-3 the largest size can appear a little blocky
+    // After you do this setput then you can just use print and println
+    // void setCursor(int16_t x0, int16_t y0);
+    // void setTextColor(uint16_t color);
+    // void setTextColor(uint16_t color, uint16_t backgroundcolor);
+    // void setTextSize(uint8_t size);
+    // void setTextWrap(boolean w);
+
+    // Rotating the screen:
+    // Roating the screen will not rotate things you've already drawn, it will only rotate new things
+    // void setRotation(uint8_t rotation);
+    // There are 4 rotation modes 0,1,2 and 3
+    // The origin will always change so that the top left is (0,0)
+    // These properties of tft object will reference the width and height of the screen
+    // uint16_t width(); 
+    // uint16_t height();
+
+    // NOTE: when printing to the LCD when using print, text will be forced forward if it's in the same spot. 
+             when printing to the LCD when using println, text will be forced down a line and to the left side of the screen.
